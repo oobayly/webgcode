@@ -575,6 +575,8 @@
 
             /* get segments */
             segs = SVG.parser.path.pathSegList;
+            if (!segs || !segs.pathSegList)
+                return array.valueOf();
 
             for (i = 0, il = segs.numberOfItems; i < il; ++i) {
                 seg = segs.getItem(i);
